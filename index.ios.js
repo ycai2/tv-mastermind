@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -11,20 +5,22 @@ import {
   Text,
   View
 } from 'react-native';
+// import AppContainer from './app/containers/AppContainer';
+import { Provider } from 'react-redux';
+import configureStore from './app/store';
+
+
+const store = configureStore();
 
 export default class TVMastermind extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          Welcome to TV Mastermind!
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
+        <Text style={styles.detail}>
+          TV Mastermind is a mobile app to provide TV show schedules & info
         </Text>
       </View>
     );
@@ -43,11 +39,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
+  detail: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
   },
 });
 
-AppRegistry.registerComponent('TVMastermind', () => TVMastermind);
+const App = () => (
+  <Provider store={store}>
+    <TVMastermind />
+  </Provider>
+);
+
+AppRegistry.registerComponent('TVMastermind', () => App);
