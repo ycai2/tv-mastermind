@@ -13,13 +13,7 @@ const {
 
 class AppContainer extends Component {
   render() {
-    return (
-      <View>
-        <Text style={{marginTop: 20}}>
-          This is the app container for TV Mastermind.
-        </Text>
-      </View>
-    );
+    return <Home {...this.props} />;
   }
 }
 
