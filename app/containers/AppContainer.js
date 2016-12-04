@@ -8,7 +8,7 @@ import Search from '../components/Search';
 class AppContainer extends Component {
   render() {
     return (
-      <Search />
+      <Search {...this.props} />
     );
   }
 }

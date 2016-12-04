@@ -12,10 +12,23 @@ const {
 } = ReactNative;
 
 class Search extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchText: ""
+    };
+  }
+
   render() {
     return (
       <View style={{marginTop: 30}}>
-
+        <View style={{padding: 10}}>
+          <TextInput
+            style={{height: 20}}
+            placeholder="Search shows you want to watch"
+            onChangeText={(searchText) => this.setState({searchText})}
+          />
+        </View>
         <Text>Hello World!</Text>
       </View>
     );
