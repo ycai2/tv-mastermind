@@ -6,9 +6,8 @@ export const addShow = () => {
   }
 };
 
-export const searchShows = (text) => {
-  return {
-    type: types.SEARCH_SHOWS,
-    text,
+export const searchShows = (searchText) => {
+  return (dispatch) => {
+    
   }
 }

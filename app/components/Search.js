@@ -19,8 +19,8 @@ class Search extends Component {
     };
   }
 
-  searchShows() {
-    this.props.searchShows();
+  searchShows(text) {
+    this.props.searchShows(text);
   }
 
   render() {
