@@ -3,12 +3,21 @@ import ReactNative from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { ActionCreators } from '../actions';
-import Search from '../components/Search';
 
-class AppContainer extends Component {
+const {
+  View,
+  TextInput,
+  Text,
+  Navigator,
+} = ReactNative;
+
+class Search extends Component {
   render() {
     return (
-      <Search />
+      <View style={{marginTop: 30}}>
+
+        <Text>Hello World!</Text>
+      </View>
     );
   }
 }
@@ -24,4 +33,4 @@ const mapDispatchToProps = (dispatch) => (
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(AppContainer);
+)(Search);
