@@ -19,6 +19,10 @@ class Search extends Component {
     };
   }
 
+  searchShows() {
+    this.props.searchShows();
+  }
+
   render() {
     return (
       <View style={{marginTop: 30}}>
@@ -26,7 +30,7 @@ class Search extends Component {
           <TextInput
             style={{height: 20}}
             placeholder="Search shows you want to watch"
-            onChangeText={(searchText) => this.setState({searchText})}
+            onChangeText={(searchText) => this.searchShows(searchText)}
           />
         </View>
         <Text>Hello World!</Text>

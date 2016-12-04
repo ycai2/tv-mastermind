@@ -5,3 +5,10 @@ export const addShow = () => {
     type: types.ADD_SHOW,
   }
 };
+
+export const searchShows = (text) => {
+  return {
+    type: types.SEARCH_SHOWS,
+    text,
+  }
+}
