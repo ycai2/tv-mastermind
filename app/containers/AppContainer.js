@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { ActionCreators } from '../actions';
 
+import NavigatorComponent from '../components/NavigatorComponent';
+
 const {
   View,
   Text,
