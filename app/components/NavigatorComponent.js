@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Navigator, Text, View } from 'react-native';
+import { Navigator } from 'react-native';
+
+import Scene from './Scene';
 
 class NavigatorComponent extends Component {
   constructor(props) {
@@ -10,29 +12,18 @@ class NavigatorComponent extends Component {
   }
 
   renderScene(route, navigator) {
-    if (route.name === 'Starred') {
-      return (
-        <View>
-          <Text style={{marginTop: 40}}>
-            The starred scene goes here
-          </Text>
-        </View>
-      );
-    } else if (route.name === 'Search') {
-      return (
-        <View>
-          <Text style={{marginTop: 40}}>
-            The search scene goes here
-          </Text>
-        </View>
-      );
-    }
+    return (
+      <Scene
+        title={route.title}
+        onForward={this.onForward}
+        onBackward={this.onBackward} />
+    );
   }
 
   onForward(route, navigator) {
     const nextIndex = route.index + 1;
     navigator.push({
-      name: route.name,
+      title: route.title,
       index: nextIndex
     });
   }
@@ -46,7 +37,7 @@ class NavigatorComponent extends Component {
   render() {
     return (
       <Navigator
-        initialRoute={{ name: 'Starred', index: 0 }}
+        initialRoute={{ title: 'Starred', index: 0 }}
         renderScene={this.renderScene} />
     );
   }
