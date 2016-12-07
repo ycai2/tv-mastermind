@@ -1,6 +1,7 @@
 ## Development Document
 
 ### Sample State
+```js
 {
   starredShows: {
     1: {
@@ -16,6 +17,7 @@
     }
   }
 }
+```
 
 ### Shows
 - [] GET http://api.tvmaze.com/shows
