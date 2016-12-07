@@ -20,6 +20,7 @@ class AppContainer extends Component {
         <Text style={{marginTop: 20}}>
           This is the app container for TV Mastermind.
         </Text>
+        <NavigatorComponent />
       </View>
     );
   }

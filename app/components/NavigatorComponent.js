@@ -12,15 +12,19 @@ class NavigatorComponent extends Component {
   renderScene(route, navigator) {
     if (route.name === 'Starred') {
       return (
-        <Text style={{marginTop: 40}}>
-          The starred scene goes here
-        </Text>
+        <View>
+          <Text style={{marginTop: 40}}>
+            The starred scene goes here
+          </Text>
+        </View>
       );
     } else if (route.name === 'Search') {
       return (
-        <Text style={{marginTop: 40}}>
-          The search scene goes here
-        </Text>
+        <View>
+          <Text style={{marginTop: 40}}>
+            The search scene goes here
+          </Text>
+        </View>
       );
     }
   }
