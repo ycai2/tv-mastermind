@@ -4,24 +4,40 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { ActionCreators } from '../actions';
 
-import NavigatorComponent from '../components/NavigatorComponent';
+import Scene from '../components/Scene';
 
 const {
   View,
   Text,
   TouchableHighlight,
-  ListView
-} = ReactNative;
+  ListView,
+  Navigator } = ReactNative;
 
 class AppContainer extends Component {
   render() {
     return (
-      <View>
-        <Text style={{marginTop: 20}}>
-          This is the app container for TV Mastermind.
-        </Text>
-        <NavigatorComponent />
-      </View>
+      <Navigator
+        initialRoute={{ title: 'Initial Scene', index: 0 }}
+        renderScene={(route, navigator) =>
+          <Scene
+            title={route.title}
+
+            onForward={() => {
+              const nextIndex = route.index + 1;
+              navigator.push({
+                title: 'Scene ' + nextIndex,
+                index: nextIndex,
+              });
+            }}
+
+            onBackward={() => {
+              if (route.index > 0) {
+                navigator.pop();
+              }
+            }}
+          />
+        }
+      />
     );
   }
 }

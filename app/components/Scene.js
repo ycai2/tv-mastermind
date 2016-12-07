@@ -5,7 +5,9 @@ class Scene extends Component {
   render() {
     return (
       <View>
-        <Text>Current Scene: {this.props.title}</Text>
+        <Text style={{marginTop: 20}}>
+          Current Scene: {this.props.title}
+        </Text>
 
         <TouchableHighlight onPress={this.props.onForward}>
           <Text>Tap me to load next scene</Text>
