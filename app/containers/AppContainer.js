@@ -37,6 +37,19 @@ class AppContainer extends Component {
             }}
           />
         }
+        navigationBar={
+          <Navigator.NavigationBar
+            routeMapper={{
+              LeftButton: (route, navigator, index, navState) =>
+                {  },
+              RightButton: (route, navigator, index, navState) =>
+                { return (<Text style={{color: 'white'}}>+</Text>); },
+              Title: (route, navigator, index, navState) =>
+                { return (<Text style={{color: 'white'}}>TV Mastermind</Text>); },
+            }}
+            style={{backgroundColor: '#222'}}
+          />
+        }
       />
     );
   }

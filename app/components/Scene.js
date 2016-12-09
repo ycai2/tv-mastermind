@@ -4,18 +4,12 @@ import { Text, View, TouchableHighlight } from 'react-native';
 class Scene extends Component {
   render() {
     return (
-      <View>
+      <View style={{backgroundColor: "white"}}>
         <Text style={{marginTop: 20}}>
-          Current Scene: {this.props.title}
+          {this.props.title} component should go here.
         </Text>
 
-        <TouchableHighlight onPress={this.props.onForward}>
-          <Text>Tap me to load next scene</Text>
-        </TouchableHighlight>
 
-        <TouchableHighlight onPress={this.props.onBackward}>
-          <Text>Tap me to load previous scene</Text>
-        </TouchableHighlight>
       </View>
     );
   }
