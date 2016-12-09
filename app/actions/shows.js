@@ -1,3 +1,4 @@
+import Api from '../lib/api';
 import * as types from './types';
 
 export const addShow = () => {
@@ -8,6 +9,6 @@ export const addShow = () => {
 
 export const searchShows = (searchText) => {
   return (dispatch) => {
-    
+
   }
 }
