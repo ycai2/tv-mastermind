@@ -1,16 +1,4 @@
-import React, { Component } from 'react';
-import {
-  AppRegistry
-} from 'react-native';
-import { Provider } from 'react-redux';
-import configureStore from './app/store';
-import AppContainer from './app/containers/AppContainer';
-
-const store = configureStore({});
-const App = () => (
-  <Provider store={store}>
-    <AppContainer />
-  </Provider>
-);
+import { AppRegistry } from 'react-native';
+import App from './app/containers/app';
 
 AppRegistry.registerComponent('TVMastermind', () => App);
