@@ -1,8 +1,11 @@
-// Export combineReducers
-import { combineReducers } from 'redux';
-import { showIdList } from './shows';
+// @flow
 
-export default combineReducers({
-    showIdList
-  }
-);
+import { combineReducers } from 'redux';
+
+// import { statsDataReducer } from './stats-data';
+
+const reducer = combineReducers({
+  // userStats: statsDataReducer,
+});
+
+export default reducer;
