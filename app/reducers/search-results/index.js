@@ -7,7 +7,7 @@ export const SearchResultsReducer = (state = defaultSearchedShows, action) => {
   switch (action.type) {
     case actionNames.SEARCH_SHOWS_SUCCESS:
       return [
-        ...state,
+        ...action.payload,
       ];
     case actionNames.SEARCH_SHOWS_ERROR:
       return [

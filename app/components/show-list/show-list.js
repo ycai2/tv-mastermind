@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import {
   ActivityIndicator,
   View,
-  ScrollView,
   Text,
-  Image,
 } from 'react-native';
 import styles from './styles';
 
@@ -35,7 +33,7 @@ export default class ShowList extends Component {
 
     return (
       <View>
-        {shows.map(show => (<Text>{JSON.stringify(show)}</Text>))}
+        {shows.map((showData) => (<Text key={showData.show.id}>{JSON.stringify(showData.show.name)}</Text>))}
       </View>
     );
   }
