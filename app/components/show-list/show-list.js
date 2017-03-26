@@ -1,4 +1,5 @@
 // @flow
+
 import React, { Component } from 'react';
 import {
   ActivityIndicator,
@@ -25,15 +26,17 @@ export default class ShowList extends Component {
 
     if (shows == null) {
       return (
-        <View style={styles.statsContainer}>
+        <View style={styles.container}>
           <ActivityIndicator style={styles.spinner} size="large" />
         </View>
       );
     }
 
     return (
-      <View>
-        {shows.map((showData) => (<Text key={showData.show.id}>{JSON.stringify(showData.show.name)}</Text>))}
+      <View style={styles.container}>
+        {shows.map(showData => (
+          <Text key={showData.show.id}>{JSON.stringify(showData.show.name)}</Text>
+        ))}
       </View>
     );
   }
