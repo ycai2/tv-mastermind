@@ -2,14 +2,14 @@
 
 import React from 'react';
 import { Scene, Router } from 'react-native-router-flux';
-// import Stats from './stats/stats';
+import Search from './search/search';
 
 export const NavigationRouter = () => (
   <Router>
     <Scene
       key="user-stats"
-      title="My Stats"
-      component={Stats}
+      title="Show List"
+      component={Search}
     />
   </Router>
 );

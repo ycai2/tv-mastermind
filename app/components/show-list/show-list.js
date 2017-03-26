@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import styles from './styles';
 
-export default class Stats extends Component {
+export default class ShowList extends Component {
   constructor(props) {
     super(props);
 
@@ -19,7 +19,7 @@ export default class Stats extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchUserData('DoctorCai-1480');
+    this.props.searchShows('girls');
   }
 
   render() {
@@ -34,7 +34,9 @@ export default class Stats extends Component {
     }
 
     return (
-      <View>{JSON.stringify(shows)}</View>
+      <View>
+        {shows.map(show => (<Text>{JSON.stringify(show)}</Text>))}
+      </View>
     );
   }
 }
